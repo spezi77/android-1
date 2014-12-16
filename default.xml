@@ -9,6 +9,12 @@
            fetch="git://review.mfunz.com"
            review="review.mfunz.com" />
 
+  <remote  name="spz"
+           fetch="git://github.com/spezi77/" />
+
+  <remote  name="gh"
+           fetch="https://github.com/" />
+
   <remote  name="local"
            fetch="git://review.mfunz.com/"
            review="review.mfunz.com" />
@@ -26,7 +32,7 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="build" name="MoKee/android_build" groups="pdk" >
+  <project path="build" name="android_build" groups="pdk" remote="spz" revision="refs/heads/mk-kk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <copyfile src="build-script" dest="mk" />
   </project>
@@ -34,7 +40,6 @@
   <project path="android" name="MoKee/android" />
 
   <project path="abi/cpp" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_abi_cpp" groups="pdk" />
-  <project path="bionic" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_bionic" groups="pdk" />
   <project path="bootable/diskinstaller" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_bootable_diskinstaller" />
   <project path="cts" name="platform/cts" remote="aosp" revision="refs/tags/android-4.4.4_r2" groups="cts" />
   <project path="dalvik" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_dalvik" />
@@ -100,7 +105,6 @@
   <project path="external/chromium_org/third_party/opus/src" name="platform/external/chromium_org/third_party/opus/src" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
   <project path="external/chromium_org/third_party/ots" name="platform/external/chromium_org/third_party/ots" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
   <project path="external/chromium_org/third_party/sfntly/cpp/src" name="platform/external/chromium_org/third_party/sfntly/cpp/src" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
-
   <project path="external/chromium_org/third_party/skia/gyp" name="platform/external/chromium_org/third_party/skia/gyp" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
   <project path="external/chromium_org/third_party/skia/include" name="platform/external/chromium_org/third_party/skia/include" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
   <project path="external/chromium_org/third_party/skia/src" name="platform/external/chromium_org/third_party/skia/src" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
@@ -156,7 +160,6 @@
   <project path="external/htop" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_external_htop" />
   <project path="external/hyphenation" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_external_hyphenation" />
   <project path="external/icu4c" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_external_icu4c" groups="pdk" />
-  <project path="external/iproute2" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_external_iproute2" groups="pdk" />
   <project path="external/ipsec-tools" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_external_ipsec-tools" />
   <project path="external/iptables" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_external_iptables" />
   <project path="external/iputils" name="platform/external/iputils" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
@@ -325,13 +328,11 @@
   <project path="hardware/broadcom/wlan" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_broadcom_wlan" groups="broadcom_wlan" />
   <project path="hardware/cm" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_cm" />
   <project path="hardware/invensense" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_invensense" groups="invensense" />
-  <project path="hardware/libhardware" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_libhardware" groups="pdk" />
   <project path="hardware/qcom/audio" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_qcom_audio" groups="qcom" />
   <project path="hardware/qcom/bt" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_qcom_bt" groups="qcom" />
   <project path="hardware/qcom/camera" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_qcom_camera" groups="qcom" />
   <project path="hardware/qcom/display" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_qcom_display" groups="qcom" />
   <project path="hardware/qcom/display-caf" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_qcom_display-caf" groups="caf" />
-  <project path="hardware/qcom/gps" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_qcom_gps" groups="qcom" />
   <project path="hardware/qcom/keymaster" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_qcom_keymaster" groups="qcom" />
   <project path="hardware/qcom/media" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_qcom_media" groups="qcom" />
   <project path="hardware/qcom/media-caf" remote="cyanogen" revision="refs/heads/cm-11.0" name="github/CyanogenMod/android_hardware_qcom_media-caf" groups="caf" />
@@ -493,10 +494,8 @@
   <project path="packages/apps/MoKeeScreenRecorder" name="MoKee/android_packages_apps_MoKeeScreenRecorder" />
   <project path="packages/apps/MoKeeSetupWizard" name="MoKee/android_packages_apps_MoKeeSetupWizard" />
   <project path="packages/apps/PackageInstaller" name="MoKee/android_packages_apps_PackageInstaller" />
-  <project path="packages/apps/Settings" name="MoKee/android_packages_apps_Settings" />
   <project path="packages/apps/Stk" name="MoKee/android_packages_apps_Stk" />
   <project path="packages/apps/ThemeChooser" name="MoKee/android_packages_apps_ThemeChooser" />
-  <project path="packages/apps/Torch" name="MoKee/android_packages_apps_Torch" />
   <!-- MoKee Packages Apps End -->
 
   <!-- MoKee Packages Provider Start -->
@@ -511,11 +510,8 @@
 
   <!-- MoKee Frameworks Start -->
   <project path="frameworks/av" name="MoKee/android_frameworks_av" groups="pdk" />
-  <project path="frameworks/base" name="MoKee/android_frameworks_base" />
   <project path="frameworks/webview" name="MoKee/android_frameworks_webview" />
-  <project path="frameworks/native" name="MoKee/android_frameworks_native" groups="pdk" />
   <project path="frameworks/opt/hardware" name="MoKee/android_frameworks_opt_hardware" />
-  <project path="frameworks/opt/telephony" name="MoKee/android_frameworks_opt_telephony" />
   <project path="frameworks/opt/telephony-msim" name="MoKee/android_frameworks_opt_telephony-msim" />
   <project path="frameworks/support" name="MoKee/android_frameworks_support" />
   <!-- MoKee Frameworks End -->
@@ -533,10 +529,43 @@
 
   <!-- Other Start -->
   <project path="art" name="MoKee/android_art" />
-  <project path="vendor/mk" name="MoKee/android_vendor_mk" >
-    <copyfile src="bootimage/Android.mk" dest="kernel/Android.mk" />
-  </project>
   <project path="device/generic/goldfish" name="MoKee/android_device_generic_goldfish" groups="pdk" />
   <!-- Other End -->
+
+  <!-- Device specific projects -->
+
+  <project path="vendor/mk" name="android_vendor_mk" remote="spz" revision="mk-kk" >
+    <copyfile src="bootimage/Android.mk" dest="kernel/Android.mk" />
+  </project>
+  
+  <!-- Use devicetrees and kernel forked from Evervolv projects -->
+  <project path="device/htc/bravo" name="android_device_htc_bravo" remote="spz" revision="mk-kk" />
+  <project path="device/htc/qsd8k-common" name="android_device_htc_qsd8k-common" remote="spz" revision="mk-kk" />
+  <project path="kernel/htc/qsd8k" name="android_kernel_htc_qsd8k" remote="spz" revision="utopian" />
+  <project path="vendor/htc" name="android_vendor_htc" remote="spz" revision="kitkat" /> 
+  
+  <!--  Use legacy projects maintained by Evervolv -->
+  <project path="hardware/qcom/audio-legacy" name="Evervolv/android_hardware_qcom_audio-legacy" remote="gh" revision="kitkat" />
+  <project path="hardware/qcom/display-legacy" name="Evervolv/android_hardware_qcom_display-legacy" remote="gh" revision="kitkat" />
+  <project path="hardware/qcom/gps-legacy" name="Evervolv/android_hardware_qcom_gps-legacy" remote="gh" revision="kitkat" />  
+
+  <!-- Use forked projects with required changes for htc bravo -->
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="spz" revision="cm-11.0" />
+  <project path="external/iproute2" name="android_external_iproute2" remote="spz" revision="cm-11.0" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="spz" revision="mk-kk" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="spz" revision="mk-kk" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="spz" revision="mk-kk" />
+
+  <!-- Use forked Settings with Trackball wake -->
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="spz" revision="mk-kk" />
+  
+  <!-- Use Torch mod (won't shutdown when screen turns off) -->
+  <project path="packages/apps/Torch" name="android_packages_apps_Torch" remote="spz" revision="mk-kk" />
+
+  <!-- Switch bionic to Purity for increased performance -->
+  <project path="bionic" name="KitKatPurity/platform_bionic" remote="gh" revision="kitkat" />
+  
+  <!-- Linaro toolchains -->
+  <project path="prebuilt/linux-x86/toolchain/arm-linux-linaro-4.9" name="Evervolv/android_prebuilts_gcc_linux-x86_arm_arm-linux-linaro-4.9" remote="gh" revision="kitkat" />
 
 </manifest>
